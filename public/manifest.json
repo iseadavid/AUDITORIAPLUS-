@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "AUDITORIAPLUS+ Mobile Scanner PWA",
+  "short_name": "Auditoria+",
+  "description": "Aplicación cliente de auditoría física offline-first con sincronización causal en IndexedDB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

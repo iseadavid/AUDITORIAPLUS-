@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  maraplus-relay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: maraplus-relay-agent
+    restart: unless-stopped
+    
+    # IMPORTANTE PARA AMBIENTES ON-PREMISE:
+    # 'network_mode: host' permite que el contenedor acceda directamente a la subred física
+    # 192.168.15.x donde reside el servidor MaraPlus (192.168.15.225:3002).
+    # En Windows/Mac o si usa bridge, verifique el enrutamiento de red local.
+    network_mode: host
+    
+    env_file:
+      - .env
+    
+    environment:
+      - NODE_ENV=production
+      - MARAPLUS_BASE_URL=http://192.168.15.225:3002
+      - MARAPLUS_TIMEOUT_MS=7000
+      - AGENT_INSTANCE_ID=maraplus-relay-prod-01
+      - TZ=America/Caracas
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"

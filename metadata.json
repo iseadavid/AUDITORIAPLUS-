@@ -1,0 +1,6 @@
+{
+  "name": "MaraPlus On-Premise Relay Agent",
+  "description": "Dockerized Node.js relay agent connecting Supabase Cloud with physical on-premise MaraPlus API using strict FIFO rate-limiting, batch cooldowns, and WebSocket subscriptions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

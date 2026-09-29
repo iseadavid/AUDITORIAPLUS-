@@ -1,0 +1,29 @@
+{
+  "name": "maraplus-relay-agent",
+  "version": "1.0.0",
+  "description": "On-Premise Relay Agent connecting Supabase Cloud with local physical MaraPlus API via WebSockets and strict anti-saturation rate limiting",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "relay-agent",
+    "supabase",
+    "maraplus",
+    "rate-limiting",
+    "websockets",
+    "on-premise",
+    "fifo-queue"
+  ],
+  "author": "MaraPlus Systems Engineering",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "dotenv": "^16.4.7"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
